@@ -1,70 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyPortfolio</title>
-    <style>
-        body {
-            height: 100%;
-            width: 100%;
-            min-height: 100vh;;
-            margin: 0;
-            padding: 0;
-        }
-        .container{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-           
-        }
-        .navbar {
-            width: 100%;
-            height: 60px;
-            background-color: black;
-            color: white;
-            
-            display: flex;
-            flex-direction: row;
-            justify-content: end;
-            align-items: center;
-            
-            
-        }
-        .content{
-            width: 100%;
-            height: 500px;
-            background-color: lightgray;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .footer {
-            width: 100%;
-    
-            background-color: black;
-            color: white;
-            padding: 10px;
-            text-align: center;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="navbar">
-            <a href="#" style="color: white; text-decoration: none;">Home</a>
-            <a href="#" style="color: white; text-decoration: none; margin-left: 20px;">About</a>
-            <a href="#" style="color: white; text-decoration: none; margin-left: 20px;">Portfolio</a>
-            <a href="#" style="color: white; text-decoration: none; margin-left: 20px;">Contact</a>
-        </div>
-        <div class="content">Content
-            <div>Skills</div>
-            <div>Project</div>
-        </div>
-        <div class="footer">Footer</div>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">HARIKESH</div>
+      <!-- Toggle button (hamburger icon) -->
+      <div class="menu-toggle" id="menu-toggle">
+        ☰
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="home" >
+    <div class="hero">
+      <h1>Hello, I'm <span>Harikesh , Pre-final Year</span></h1>
+      <h2>Embedded System Engineer |Full Stack Developer | Cloud Engineer</h2>
+      <br><br><br><br>
+      <p>Crafting clean, modern, and responsive solutions.</p>
     </div>
-    
+
+    <div class="tech-skills">
+ 
+  <div class="skill-card">
+    <span class="skill-icon">🧑‍💻</span>
+    <span class="skill-name">IOT System Integration</span>
+  </div>
+   <div class="skill-card">
+    <span class="skill-icon">⚛️</span>
+    <span class="skill-name">JS, React , Bootstrap</span>
+  </div>
+  <div class="skill-card">
+    <span class="skill-icon">☁️</span>
+    <span class="skill-name">AWS , E2C , Backend</span>
+  </div>
+</div>
+
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="about-content">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <br><br><br><br><br>
+        <p>
+          I'm a passionate Dev skilled in building solutions in the field of IOT.
+          I specialize in creating IOT Solution and building mini iot projects, I am currently exploring the world of full-stack development and cloud engineering.
+        </p>
+        <br><br>
+        <p>
+          My focus is always on writing clean and maintainable code while delivering user-friendly experiences. I enjoy collaborating with teams to bring innovative ideas to life and solve complex problems.
+        </p>
+      </div>
+      <div class="about-illustration">
+        <div class="icon">💻</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <div class="project-img">📱</div>
+        <h3>Iot Projects</h3>
+        <p>Smart Railway Management</p>
+        <p>Smart Automation System</p>
+      </div>
+      <div class="project-card">
+        <div class="project-img">💡</div>
+        <h3>Web Projects</h3>
+        <p>Food Delivery App</p>
+        <p>Cozy-Games</p>
+      </div>
+      <div class="project-card">
+        <div class="project-img">🌐</div>
+        <h3>Mobile Apps</h3>
+        <p>Chat-Connect App</p>
+      </div>
+      <div class="project-card">
+        <div class="project-img">⚙️</div>
+        <h3>AI Projects</h3>
+        <p>Custom ChatBot</p>
+        <p>AI-Powered RAG model</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Get in touch</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Mail" required>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Harikesh. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
