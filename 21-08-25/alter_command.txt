@@ -1,0 +1,36 @@
+show databases;
+use work;
+
+show tables;
+create table student(
+sname varchar(100),
+sreg_no int,
+sphn_no int,
+semail varchar(100),
+sdept varchar(100)
+);
+
+desc student;
+
+select * from student;
+alter table student add column ssec varchar(10);
+select * from student;
+
+alter table student drop column sadd;
+select * from student;
+
+desc student;
+
+
+insert into student(sname,sreg_no,sphn_no,semail,sdept,ssec)
+values("Alok",01,12345,"alok@gmail.com","cse","a1"),
+("Bob",02,12346,"Bob@gmail.com","cse","a2"),
+("Carl",03,12347,"Carl@gmail.com","ai","b1"),
+("Damon",04,12348,"Damon@gmail.com","iot","a1"),
+("Ellis",05,12349,"Ellis@gmail.com","iot","a1");
+
+select * from student;
+select * from student where sdept = "iot"
+
+
+
