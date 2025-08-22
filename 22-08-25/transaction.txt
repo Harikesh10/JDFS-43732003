@@ -1,0 +1,81 @@
+-- Transactions
+use work;
+show tables;
+CREATE TABLE CUSTOMERS (
+   ID INT NOT NULL,
+   NAME VARCHAR (20) NOT NULL,
+   AGE INT NOT NULL,
+   ADDRESS CHAR (25),
+   SALARY DECIMAL (18, 2),
+   PRIMARY KEY (ID)
+);
+INSERT INTO CUSTOMERS VALUES 
+(1, 'Ramesh', 32, 'Ahmedabad', 2000.00),
+(2, 'Khilan', 25, 'Delhi', 1500.00),
+(3, 'Kaushik', 23, 'Kota', 2000.00),
+(4, 'Chaitali', 25, 'Mumbai', 6500.00),
+(5, 'Hardik', 27, 'Bhopal', 8500.00),
+(6, 'Komal', 22, 'Hyderabad', 4500.00),
+(7, 'Muffy', 24, 'Indore', 10000.00);
+select * from customers;
+
+-- Transaction
+START TRANSACTION;
+UPDATE CUSTOMERS SET SALARY = 1800.00 WHERE ID = 2;
+select * from customers;
+
+SAVEPOINT A1415;
+-- After savepoint an update is done
+UPDATE CUSTOMERS SET SALARY = 5000.00 WHERE ID = 6;
+Rollback to savepoint A1415;
+-- So here after the savepoint nothing is excuted because of the rollback to savepoint, so khilan is updated , but komal is not updated
+select * from customers;
+
+COMMIT;
+
+-- New Transaction
+
+start transaction;
+savepoint main;
+
+select * from customers;
+update customers set address = "TamilNadu" where id = 1;
+savepoint A1420;
+update customers set address = "Karnataka" where id = 1;
+savepoint A1425;
+select * from customers;
+
+-- This would rollback to the tamilnadu because of the savepoint
+rollback to savepoint A1420;
+select * from customers;
+
+update customers set address = "Andhra" where id = 1;
+savepoint A1430;
+select * from customers;
+update customers set address = "Goa" where id = 1;
+-- This is would go to Andhra
+rollback to  savepoint A1430;
+-- This would rollback to karnataka because of sp and rollback
+rollback to savepoint A1425;
+
+rollback;
+commit;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

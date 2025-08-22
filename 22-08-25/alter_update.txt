@@ -1,0 +1,61 @@
+show databases;
+use work;
+
+show tables;
+
+alter table student add(scountry varchar(100) default "india");
+select * from student;
+
+select * from student where sdept = "iot" and scountry = "india";
+
+insert into student values("Frank",06,123450,"frank@gmail.com","iot","b1","chicago");
+select * from student;
+select * from student where sdept = "iot";
+-- Alter command ddl command
+desc student;
+-- Modify is used to change the datatype of the column
+alter table student modify column ssec varchar(20);
+
+desc student;
+select * from student;
+-- Change is used to change the column , feature name 
+alter table student change column sdept sdep varchar(100);
+
+select * from student;
+
+alter table student rename column sdep to sdept;
+select * from student;
+
+alter table student add(sgen varchar(10) default "m");
+
+-- Update command , dml command
+update student set ssec = "a3" where sreg_no = 6;
+select * from student;
+update student set ssec = "a2" where sreg_no = 5;
+select * from student;
+
+
+
+update student set scountry = "Swiss", ssec="a1" where sdept = "iot";
+select* from student;
+
+update student set scountry = "Chicago" where ssec="a1" and sreg_no =6;
+select * from student;
+
+alter table student add( sage int default 19);
+select * from student;
+
+update student set sage = sage +1;
+select * from student;
+
+
+
+
+
+
+
+
+
+
+
+
