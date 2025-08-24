@@ -1,0 +1,35 @@
+use work;
+show tables;
+create table course(
+   sid_no int not null,
+   sfname varchar(100) not null,
+   slname varchar(100) not null,
+   sdept varchar(100) not null,
+   sad_no int not null,
+   semail varchar(100) not null,
+   unique (sid_no,sad_no)
+);
+
+desc course;
+
+alter table course add column slname varchar(100);
+-- Adding a constrains
+alter table course modify column slname varchar(100) unique;
+-- We are dropping the unique constrain , we can only drop the unique constrain 
+alter table course drop index slname;
+-- We can't drop the not null constrain directly because it is stored directly in the table , if no values are there it would take it as null 
+-- The below command won't exceute 
+alter table course modify column slname varchar(100) null;
+alter table course drop index slname;
+
+insert into course(sid_no, sfname , sdept,sad_no, semail,slname)
+value(1,"Abignale","cse",123,"abi@gmail.com","Raj"),
+(2, "Fernandez", "ece", 124, "fernandez@gmail.com", "Priya"),
+(3, "Kumar", "mech", 125, "kumar@gmail.com", "Arjun");
+
+select * from course;
+
+
+
+
+

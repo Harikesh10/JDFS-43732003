@@ -1,0 +1,49 @@
+create database home;
+use home;
+
+create table category(
+   cid int primary key,
+   cname varchar(100) not null,
+   cdes varchar(200) not null
+);
+
+create table product(
+    pid int primary key,
+    pname varchar(100) not null,
+    pdes varchar(200) not null,
+    cid int not null,
+    foreign key (cid) references category(cid)
+);
+
+desc category;
+desc product;
+
+insert into category(cid,cname,cdes) 
+values(1001,"Car","This is a car"),
+(1002,"Electronics","These are electronics"),
+(1003,"Home Appliance","Home stuff");
+
+
+insert into product(pid,pname,pdes,cid) 
+values(1,"Red bull","Get wings and drive",1001),
+(2,"Laptop","Get the best anti-glare display",1002),
+(3,"Mercedes","The Goat",1001);
+
+
+delete from product where cid = 1001;
+select * from product;
+-- You can delete the products from the product table
+drop table product;
+select * from category;
+
+delete from category where cid=1001;
+-- But you can't delete from the category table because it is linked to another product table using foreign key  
+desc category;
+update category set cid=11001 where cid = 1001;
+
+
+
+
+
+
+

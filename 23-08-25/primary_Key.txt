@@ -1,0 +1,40 @@
+use work;
+create table person(
+	pid int primary key,
+    pname varchar(100) not null,
+    ptown varchar(100),
+    pph_no int not null,
+    unique (pph_no)
+    
+    
+);
+desc person;
+
+-- This would return a error because only one primary key is allowed
+alter table person add primary key (pname);
+
+alter table person add column age int;
+desc person;
+
+-- Check constrain , this would add the data after checking a condition
+
+alter table person add check(age>=18 and age <=120);
+
+select * from person;
+insert into person(pid,pname, ptown , pph_no , age)
+values(1,"Kenny","New York",12345,"25"),
+(2,"Khalid","Wshington",12346,"28");
+
+-- Both wont work because of not null and check constraint
+insert into person values(3,"Kan","Chicago",12345,19);
+insert into person values(3,"Kan","Chicago",12347,120);
+
+
+
+
+
+
+
+
+
+
