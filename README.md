@@ -10,3 +10,4 @@
 
 ### Leanred about constraints
 
+### Learned about foreign key with cascading technique and clauses
