@@ -1,0 +1,57 @@
+-- Cascade . this is used to delete or update the values in both the tables using foreign key
+create database home;
+use home;
+show tables;
+
+desc product;
+
+
+create table category(
+   cid int primary key,
+   cname varchar(100) not null,
+   cdes varchar(200) not null
+);
+desc category;
+
+insert into category(cid,cname,cdes) 
+values(1001,"Car","This is a car"),
+(1002,"Electronics","These are electronics"),
+(1003,"Home Appliance","Home stuff");
+
+select * from category;
+
+show tables;
+
+create table product(
+    pid int primary key,
+    pname varchar(100) not null,
+    pdes varchar(200) not null,
+    cid int not null,
+    foreign key (cid) references category(cid) on update cascade
+);
+
+insert into product(pid,pname,pdes,cid) 
+values(1,"Red bull","Get wings and drive",1001),
+(2,"Laptop","Get the best anti-glare display",1002),
+(3,"Mercedes","The Goat",1001);
+
+select * from category;
+select * from product;
+
+-- Delete works and updates on both the tables 
+delete from product where cid = 1002;
+delete from category where cid = 1001;
+-- This would delete because of the on delete casade 
+
+update category set cid =1004 where cid =1001;
+
+
+
+
+
+
+
+
+
+
+
