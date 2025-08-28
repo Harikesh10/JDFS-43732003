@@ -1,0 +1,52 @@
+create database stu123;
+use stu123;
+create table student (
+
+    student_id INT PRIMARY KEY AUTO_INCREMENT,
+    award_id int,
+    student_name VARCHAR(50),
+    student_dob DATE,
+    stduent_email VARCHAR(100) UNIQUE,
+    student_dept VARCHAR(50),
+    student_yos INT
+);
+
+
+create table student_awards (
+    student_id int,
+    award_id INT PRIMARY KEY ,
+    award_name VARCHAR(100),
+    award_year int,
+    award_category VARCHAR(50),
+    awarded_by VARCHAR(100)
+
+);
+
+show tables;
+drop table student;
+INSERT INTO student (student_id,award_id, student_name, student_dob, stduent_email, student_dept, student_yos)
+VALUES
+(1,101, 'Alice Johnson', '2002-03-15', 'alice.johnson@example.com', 'Computer Science', 2),
+(2,102, 'Brian Smith', '2001-07-20', 'brian.smith@example.com', 'Mechanical', 3),
+(3,103, 'Catherine Lee', '2003-01-10', 'catherine.lee@example.com', 'Electronics', 1),
+(4,104 ,'David Miller', '2000-11-25', 'david.miller@example.com', 'Civil', 4),
+(5,105, 'Eva Brown', '2002-09-30', 'eva.brown@example.com', 'Information Tech', 2);
+drop table student_awards;
+INSERT INTO student_awards (student_id,award_id, award_name, award_year, award_category, awarded_by)
+VALUES
+(1,101, 'Best Coder', 2023, 'Technical', 'Tech Fest Committee'),
+(2,102, 'Robotics Champion', 2022, 'Innovation', 'National Robotics Club'),
+(3,103, 'Top Freshman', 2023, 'Academic', 'University Dean'),
+(4,104, 'Best Project Presentation', 2021, 'Research', 'Civil Engineers Association'),
+(5,105, 'Hackathon Winner', 2023, 'Coding', 'Google Developers Group');
+ 
+select * from student;
+select * from student_awards;
+
+
+select * from student_awards where student_id =
+(select student_id from student where student_id = 4);
+
+
+select student_name from student where award_id = 
+(select award_id from student_awards where award_id = 101);
