@@ -47,6 +47,7 @@ group by department;
 select * from worker limit 4;
 -- They skip first 3 and display the next 6 values
 SELECT * FROM Worker ORDER BY WORKER_ID limit 6 OFFSET 3;
+select * from worker order by salary desc limit 3;
 
 
 -- Trim
@@ -57,6 +58,7 @@ select trim(first_name) as Name from worker;
 select Ltrim(last_name) as left_clean from worker;
 -- Right trim
 select Rtrim(last_name) as right_clean from worker;
+
 
 
 
