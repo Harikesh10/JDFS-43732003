@@ -1,0 +1,53 @@
+create database office;
+use office;
+
+create table student(
+sid int primary key,
+sname varchar(100) not null,
+sdept varchar(100) not null
+);
+
+create table course(
+cid int primary key,
+sid int not null,
+cname varchar(100) not null
+);
+
+
+
+insert into student(sid,sname,sdept) 
+value(1,"Ali","Cse"),
+(2,"Bob","Mech"),
+(3,"Cat","EEE");
+
+insert into course(cid,sid,cname)
+values(1001,1,"Full-Stack"),
+(1002,2,"Cloud-Computing"),
+(1004,4,"Devoops");
+
+select * from student;
+
+-- Cross join Displays all the values
+select * from student cross join course;
+
+-- Inner Join Displays the common values
+select * from student inner join course where student.sid = course.sid;
+
+-- Natural Join display the common values when both have same datatype , data , and value
+select * from student natural join course where student.sid = course.sid;
+
+-- Left outer join  
+select * from student left outer join course on (student.sid = course.sid); 
+
+-- Right outer join
+
+select * from student right outer join course on (student.sid = course.sid);
+
+-- This won't work in this version
+-- select * from student full outer join course on (student.sid = course.sid);
+
+-- Use union to make full join work
+
+select * from student left outer join course on (student.sid = course.sid)
+union
+select * from student right outer join course on (student.sid = course.sid); 
