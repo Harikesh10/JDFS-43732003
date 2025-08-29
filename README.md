@@ -12,3 +12,9 @@
 
 ### Learned about foreign key with cascading technique and clauses
 
+### Learned about the aggregation functions
+
+### Learned about group by , order by and sub-queries
+
+### Learned about join , inner , cross , outer (left, right , full)
+
