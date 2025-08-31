@@ -19,3 +19,6 @@
 
 ### Learned about join , inner , cross , outer (left, right , full)
 
+### Learned about the database connection between java and mysql. Performing CRUD Operations
+
+
