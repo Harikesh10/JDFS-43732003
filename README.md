@@ -1,5 +1,5 @@
 ## JDFS-43732003
-# SQL AND JAVA
+# SQL and Basic JAVA
 
 ### Learnt about box models and basic js
 
@@ -20,5 +20,15 @@
 ### Learned about join , inner , cross , outer (left, right , full)
 
 ### Learned about the database connection between java and mysql. Performing CRUD Operations
+
+
+#Advanced Java
+
+### Learned about basic java 
+- operators 
+- conditional and looping statement
+- methods
+- Class and Objects
+- Inheritance
 
 
