@@ -1,0 +1,23 @@
+package TheOver;
+
+
+class student{
+	student(){
+		System.out.println("No argument");
+	}
+
+	student(String name, int age){
+		System.out.println("Name: "+name+" Age: "+age);
+	}
+}
+
+public class Cons {
+	
+
+	public static void main(String[] args) {
+		student s1 = new student();
+		student s2 = new student("Harikesh", 19);
+
+	}
+
+}

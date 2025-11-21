@@ -1,0 +1,35 @@
+package TheOver;
+import java.util.*;
+
+public class Excep2 {
+    public static void main(String[] args){
+
+        Scanner scan = new Scanner(System.in);
+        int arr[] = {1,2,3,4,5};
+        System.out.println("Enter the size of array:");
+        int size = scan.nextInt();
+        try {
+        	
+        	if (size != arr.length) {
+                throw new Exception("Wrong size!");
+            }
+        	System.out.println("Enter the index:");
+            int index = scan.nextInt();
+            System.out.println("Value: " + arr[index]);  
+
+        } 
+        catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+

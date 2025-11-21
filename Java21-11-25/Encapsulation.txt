@@ -1,0 +1,53 @@
+package TheOver;
+
+class sbi {
+    private String user_name = "Harikesh";
+    private int acc_balance = 100000;
+    private String email = "haribusi@gmail.com";
+    
+  //get
+    public String getshowName() {
+        return user_name;
+    }
+    //get
+    public int getshowBalance() {
+        return acc_balance;
+    }
+    public String getEmail() {
+        return email;
+    }
+    //set
+    public void setEmail(String email) {
+    	this.email = email;
+    }
+    
+}
+class gpay extends sbi {
+    void name() {
+        System.out.println(getshowName());
+    }
+
+    void balance() {
+        System.out.println(getshowBalance());
+    }
+
+    void mail() {
+    	setEmail("nigga@gmail.com");
+    	System.out.println(getEmail());
+    }
+}
+
+public class Encap {
+    public static void main(String[] args) {
+
+        gpay g = new gpay();
+
+        g.name();      
+        g.balance();   
+        g.mail();      
+    }
+}
+
+
+//Set we can't change the value
+//get we can change the values
