@@ -22,7 +22,7 @@
 ### Learned about the database connection between java and mysql. Performing CRUD Operations
 
 
-#Advanced Java
+# Advanced Java
 
 ### Learned about basic java 
 - operators 
