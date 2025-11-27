@@ -31,4 +31,18 @@
 - Class and Objects
 - Inheritance
 
+### Mutlithreading and exception handling
+- Multi-threading concepts
+- Exception handling (try , catch , throw)
+
+### String and Array
+- Basic array concepts
+- Util packages
+- String , string buffer , string builder
+
+### Collections
+## Basic data structures
+- Array , Linked List
+- Hashset , HashLinkedSet, TreeSet
+
 
