@@ -48,6 +48,6 @@
 ### JSP
 - Created basic java web application
 - JBDC
-- 
+- CRUD Operation in web data
 
 
