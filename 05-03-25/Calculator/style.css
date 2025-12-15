@@ -1,0 +1,76 @@
+.container{
+    background-color: #5A5A5A;
+    color: white;
+    margin-top: 5%;
+    margin-left: 40%;
+    margin-right: 40%;
+    height: 500px;
+    border: solid 1px;
+    border-radius: 6%;
+    
+}
+
+.display{
+    background-color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    color: black;
+}
+
+.flex{
+    margin-top: 20%;
+    border: solid black 2px;
+    display: flex;
+    flex-direction: row;
+    gap: 20%;
+    
+}
+.numbers{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 4%;
+    align-items: center;
+    justify-content: center;
+}
+.numbers button{
+    border-radius: 20%;
+}
+
+
+.oper{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 4%;
+    align-items: center;
+    justify-content: center;
+}
+
+.oper button{
+    border-radius: 20%;
+}
+.end{
+    margin-left: 40%;
+}
+
+.end button{
+    align-items: center;
+    border-radius: 20%;
+
+
+}
+.res button{
+    margin-top: 5%;
+   margin-left: 30%;
+   border-radius: 30%;
+   background-color: green;
+   border: solid green;
+}
+.res button input{
+    background-color: green;
+    border: solid green;
+
+}
+
+
+
+
