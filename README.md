@@ -56,7 +56,71 @@
 - Designed and styled using Bootstrap
 - Created database functionality for Admin and Users
 
+
+
+
 ### Capstone Final Project
+
+
+# CompSolveHub 🛠️  
+### Multi-User Complaint Management System
+
+CompSolveHub is a full-stack web application designed to manage and resolve complaints in colleges, companies, and organizations.  
+It provides a centralized platform where users can raise complaints, track their status, and receive updates, while administrators manage and resolve issues efficiently.
+
+---
+
+## 🚀 Features
+
+- User Registration & Login  
+- Role-based Access (User & Admin)  
+- Raise and Track Complaints  
+- Complaint Status Management (Open, In Progress, Resolved)  
+- Email Notifications on Status Updates  
+- Secure and Scalable Backend  
+- RESTful APIs tested using Postman  
+
+---
+
+## 🏗️ Project Modules
+
+- User Module  
+- Admin Module  
+- Complaint Management Module  
+- Email Notification Module  
+
+---
+
+## 🛠️ Technologies Used
+
+- **Backend:** Spring Boot (Java)  
+- **Frameworks:** Spring MVC, Spring Data JPA (Hibernate), Spring Security (JWT)  
+- **Database:** MySQL  
+- **Frontend:** HTML, CSS, Bootstrap, Thymeleaf  
+- **Build Tool:** Maven  
+- **Server:** Apache Tomcat (Embedded)  
+- **Testing:** Postman  
+- **IDE:** Spring Tool Suite (STS)  
+
+---
+
+## ⚙️ System Requirements
+
+### Software Requirements
+- Java 8 or higher  
+- MySQL Server 8.0  
+- Spring Tool Suite (STS)  
+- Google Chrome Browser  
+- Postman  
+
+---
+
+## ▶️ How to Run the Project
+
+1. Clone the repository  
+   ```bash
+   git clone https://github.com/Harikesh10/CompSolveHub.git
+
 
 
 
