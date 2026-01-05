@@ -77,7 +77,7 @@
                 </tr>
                 </thead>
 
-                <tbody>
+                <tbody class="table-body">
                 <tr th:each="c : ${complaints}">
                     <td th:text="${c.title}"></td>
                     <td th:text="${c.user.name}"></td>
@@ -111,6 +111,7 @@
 
 <!-- Custom JS -->
 <script src="/js/main.js"></script>
+
 
 </body>
 </html>
