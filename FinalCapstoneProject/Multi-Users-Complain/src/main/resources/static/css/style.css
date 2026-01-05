@@ -38,10 +38,49 @@ body.dark-mode .bg-light {
     background-color: #020617 !important;
 }
 
-body.dark-mode .card {
+body.dark-mode .card ,table-body{
     background-color: #0f172a;
     color: #e5e7eb;
 }
+/* ===== DARK MODE : ADMIN TABLE ===== */
+
+body.dark-mode #complaintTable {
+    background-color: #0f172a;
+}
+
+body.dark-mode #complaintTable tbody tr {
+    background-color: #0f172a;
+    color: #e5e7eb;
+}
+
+body.dark-mode #complaintTable tbody tr td {
+    background-color: #0f172a;
+    color: #e5e7eb;
+    border-color: #1e293b;
+}
+/* ===== DARK MODE : ALL TABLES ===== */
+
+body.dark-mode .table {
+    background-color: #0f172a;
+    color: #e5e7eb;
+}
+
+body.dark-mode .table tbody tr {
+    background-color: #0f172a;
+    color: #e5e7eb;
+}
+
+body.dark-mode .table tbody tr td {
+    background-color: #0f172a;
+    color: #e5e7eb;
+    border-color: #1e293b;
+}
+
+/* Hover effect */
+body.dark-mode .table-hover tbody tr:hover {
+    background-color: #1e293b;
+}
+
 
 body.dark-mode footer {
     background-color: #0f172a;
